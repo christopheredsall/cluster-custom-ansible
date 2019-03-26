@@ -1,0 +1,16 @@
+---
+- name: Install devtoolset-8 from Software Collections
+  yum:
+    name: devtoolset-8
+    state: latest
+
+- name: Install other packages
+  yum:
+    name: "{{ packages }}"
+  vars:
+    packages:
+    - tbb-devel
+    - openmpi-devel
+    - environment-modules
+    - atlas-devel
+    - iperf3 

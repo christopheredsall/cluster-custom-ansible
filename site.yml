@@ -1,0 +1,5 @@
+---
+- name: brismedphys playbook
+  hosts: all
+  roles:
+    - packages
